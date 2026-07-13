@@ -8,6 +8,17 @@ This skill automatically generates Git commit messages and Pull Request (PR) tem
 
 ***
 
+# Install
+**For Claude** — commit-pr-generator.skill: Install directly using the "Save skill" button on the file card. For Claude Code, you can also unzip it into ~/.claude/skills/.
+
+**For Codex** — commit-pr-generator-codex.zip: Install by running the following commands:
+```bash
+mkdir -p ~/.codex/skills
+unzip commit-pr-generator-codex.zip -d ~/.codex/skills/
+```
+
+To use it on a per-project basis, extract it to .codex/skills/ within your repository. Since Codex also auto-loads skills based on descriptions, it will work exactly the same way when you request something like "Create a commit message."
+
 # Rules
 ```
 - 반드시 현재 워크트리를 더럽히는 코드 수정이나 파일 생성 행위를 하지 말것
