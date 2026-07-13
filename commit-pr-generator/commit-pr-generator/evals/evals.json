@@ -1,0 +1,19 @@
+{
+  "skill_name": "commit-pr-generator",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "dirty-worktree-commit-and-pr",
+      "prompt": "/tmp/test-repos/dirty-repo 저장소의 변경사항을 분석해서 커밋 메시지랑 PR 내용 만들어줘",
+      "expected_output": "워크트리가 더러우므로 [타입] 순번. 메시지 형식의 한글 커밋 메시지와 제목/요약/변경사항/영향범위를 포함한 한글 PR 내용을 출력. 저장소를 절대 변경하지 않음.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "eval_name": "clean-worktree-pr-only",
+      "prompt": "/tmp/test-repos/clean-repo 저장소 기준으로 커밋 메시지랑 PR 내용 준비해줘",
+      "expected_output": "워크트리가 깨끗하므로 커밋 메시지는 생성하지 않고(또는 불필요함을 명시), main 대비 feature 브랜치 커밋 3개를 분석한 한글 PR 내용만 출력. 저장소를 절대 변경하지 않음.",
+      "files": []
+    }
+  ]
+}
